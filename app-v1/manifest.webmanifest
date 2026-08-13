@@ -1,0 +1,12 @@
+{
+  "name": "교회 출석관리 통합 Test",
+  "short_name": "교회출석",
+  "start_url": "./",
+  "display": "standalone",
+  "background_color": "#07101d",
+  "theme_color": "#07101d",
+  "lang": "ko",
+  "icons": [
+    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
+  ]
+}
