@@ -1,1 +1,1 @@
-window['make'+'Backup']=function(){render();};
+window['make'+'Backup']=function(){db.backups.unshift({id:'b'+Date.now(),ts:new Date().toISOString(),date:isoToday,label:'Manual '+isoToday,type:'Manual',protected:true});audit('System','수동 보관본 생성');saveDB();toast('수동 보관본 생성 완료');render();};
