@@ -5,8 +5,5 @@
   "display": "standalone",
   "background_color": "#07101d",
   "theme_color": "#07101d",
-  "lang": "ko",
-  "icons": [
-    {"src":"icon.svg","sizes":"any","type":"image/svg+xml","purpose":"any maskable"}
-  ]
+  "lang": "ko"
 }
