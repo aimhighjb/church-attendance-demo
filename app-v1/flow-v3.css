@@ -1,0 +1,46 @@
+/* iPhone flow v3 — native-like flat rows, minimal cards/bubbles. */
+:root{--ios-line:rgba(126,151,181,.34);--ios-soft:#aebed1;--ios-blue:#75e3ff;--ios-green:#82f2c8;--ios-bg:#07101d}
+.brand{cursor:pointer}.brand:active{opacity:.72}
+.focus-context{display:grid;grid-template-columns:38px minmax(0,1fr) 54px;align-items:center;gap:7px;padding:8px 2px 9px;border-top:1px solid var(--ios-line);border-bottom:1px solid var(--ios-line)}
+.focus-home{width:36px;height:42px;border:0;background:transparent;color:var(--ios-blue);font-size:24px;font-weight:900;padding:0}
+.focus-context-main{min-width:0}.focus-date{font-size:12px;color:var(--ios-soft);font-weight:760;line-height:1.1}.focus-meeting{font-size:22px;color:#fff;font-weight:950;line-height:1.12;margin-top:2px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.focus-meta{font-size:12px;color:var(--ios-soft);font-weight:720;margin-top:3px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.focus-total{text-align:center;border-left:1px solid var(--ios-line);padding-left:7px}.focus-total strong{display:block;font-size:27px;line-height:1;font-weight:950;color:var(--ios-green)}.focus-total span{display:block;font-size:10px;color:var(--ios-soft);font-weight:800;margin-top:3px}
+.attendance-totals{display:flex;align-items:center;gap:10px;min-height:38px;padding:5px 3px;border-bottom:1px solid var(--ios-line);overflow-x:auto;white-space:nowrap}.attendance-totals span{font-size:12px;color:var(--ios-soft);font-weight:760}.attendance-totals b{font-size:15px;color:#fff;margin-left:2px}.attendance-totals .presence-text{margin-left:auto;font-size:10px}
+.attendance-tools{padding:7px 0 4px;border-bottom:1px solid var(--ios-line)}
+.flat-tabs{display:grid;grid-template-columns:repeat(4,1fr);margin-top:5px;border-bottom:1px solid var(--ios-line)}.flat-tabs button{min-height:34px;border:0;border-bottom:2px solid transparent;background:transparent;color:var(--ios-soft);font:inherit;font-size:12px;font-weight:850;padding:0 2px}.flat-tabs button.on{color:#fff;border-bottom-color:var(--ios-blue)}
+.flat-section{margin-top:9px}.flat-section-title{font-size:14px;font-weight:900;padding:3px 2px 5px;border-bottom:1px solid var(--ios-line)}
+.focus-actions{display:flex;justify-content:flex-end;gap:14px;padding:8px 2px 2px;border-top:1px solid var(--ios-line)}.text-action{border:0;background:transparent;color:var(--ios-blue);font:inherit;font-size:13px;font-weight:850;padding:5px 0}
+
+@media(max-width:699px){
+  body{background:linear-gradient(180deg,#07101d,#03070e 78%)!important}
+  .app-shell{padding-left:8px!important;padding-right:8px!important}
+  .topbar{min-height:48px!important;padding:4px 0!important;border-bottom:1px solid var(--ios-line)!important;background:transparent!important}
+  .brand-logo{width:34px!important;height:34px!important;border-radius:9px!important;font-size:15px!important;box-shadow:none!important}.brand-name{font-size:16px!important}.brand-sub{font-size:10px!important;margin-top:1px!important}
+  .top-actions{gap:0!important}.icon-btn{border:0!important;background:transparent!important;border-radius:0!important;min-width:36px!important;min-height:38px!important}
+  .notice{border:0!important;border-bottom:1px solid var(--ios-line)!important;border-radius:0!important;background:transparent!important;padding:4px 1px!important;margin:0 0 4px!important;font-size:10px!important;color:#b9c6d6!important}
+  .test-strip{border:0!important;border-bottom:1px solid var(--ios-line)!important;border-radius:0!important;background:transparent!important;padding:3px 0 5px!important;margin-bottom:4px!important}
+  .test-label{font-size:9px!important}
+  .seg{border:0!important;background:transparent!important;border-radius:0!important;padding:0!important;gap:0!important}.seg button{border-radius:0!important;background:transparent!important;border:0!important;border-bottom:2px solid transparent!important;min-height:32px!important;padding:0 8px!important}.seg button.on{background:transparent!important;color:#fff!important;border-bottom-color:var(--ios-blue)!important}
+  .tabs{border:0!important;background:transparent!important;border-radius:0!important;gap:0!important}.tab{border-radius:0!important;background:transparent!important;border:0!important;border-bottom:2px solid transparent!important}.tab.on{background:transparent!important;border-bottom-color:var(--ios-blue)!important}
+  .section{margin-top:8px!important}.section-head{margin-bottom:4px!important}.section-head h2{font-size:19px!important}.hint{font-size:10px!important}
+  .card{background:transparent!important;box-shadow:none!important;border-radius:0!important;border-left:0!important;border-right:0!important;border-top:0!important;border-bottom:1px solid var(--ios-line)!important;padding:7px 2px!important}
+  .row-list{border-top:1px solid var(--ios-line)!important;border-bottom:0!important}.row-card{background:transparent!important;border-radius:0!important;border:0!important;border-bottom:1px solid var(--ios-line)!important;padding:7px 2px!important;min-height:48px!important}.row-card:last-child{border-bottom:0!important}
+  .menu-card{background:transparent!important;border-radius:0!important;border:0!important;border-bottom:1px solid var(--ios-line)!important;padding:8px 2px!important}.menu-card:last-child{border-bottom:0!important}.menu-group-title{padding-left:2px!important}
+  .badge{background:transparent!important;border:0!important;border-radius:0!important;padding:0!important;font-size:10px!important}.badge.ok{color:var(--ios-green)!important}.badge.warn{color:#ffd978!important}.badge.danger{color:#ff9b9b!important}.badges{margin-top:2px!important}
+  .home-datebar{background:transparent!important;border-color:var(--ios-line)!important}.summary-strip{background:transparent!important;border-color:var(--ios-line)!important}.summary-metric{border-color:var(--ios-line)!important;padding-top:6px!important;padding-bottom:6px!important}.summary-metric strong{font-size:25px!important}.summary-metric:first-child strong{font-size:30px!important}
+  .dense-list{border-color:var(--ios-line)!important}.dense-row{border-color:var(--ios-line)!important;padding-left:0!important;padding-right:0!important;min-height:57px!important}.dense-action-row{padding-left:0!important;padding-right:0!important}
+  .ops-line{border-color:var(--ios-line)!important}.ops-line span{border-color:var(--ios-line)!important}
+  .attendance-grid,.bubbles{border-left:0!important;border-top:1px solid var(--ios-line)!important;grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  .att-cell,.bubble{border-right:1px solid var(--ios-line)!important;border-bottom:1px solid var(--ios-line)!important;min-height:55px!important;padding:6px 20px 5px 5px!important;background:transparent!important}.att-cell:nth-child(3n),.bubble:nth-child(3n){border-right:0!important}.att-cell.on,.bubble.on{background:rgba(62,199,162,.09)!important;box-shadow:inset 3px 0 0 var(--ios-green)!important}
+  .att-name,.bubble-name{font-size:15px!important}.att-title,.bubble-title{font-size:10px!important}.att-note,.bubble-note{font-size:10px!important;margin-top:3px!important}
+  .group-label{border-bottom:0!important;padding-left:1px!important;padding-right:1px!important}
+  .counter-grid{border-top:0!important;border-bottom:0!important}.count-row{border-color:var(--ios-line)!important;padding-left:0!important;padding-right:0!important}.count-row button,.count-row input{border-radius:5px!important}
+  .search,.field{border-radius:6px!important;background:#0c1727!important;border-color:rgba(113,139,171,.48)!important}
+  .btn{border-radius:6px!important}.btn:not(.primary){background:transparent!important}
+  .sticky-summary{border-radius:0!important;background:transparent!important;border-left:0!important;border-right:0!important;padding-left:1px!important;padding-right:1px!important}
+  .metric-cell,.ops-cell{background:transparent!important;border-color:var(--ios-line)!important}
+  .table-wrap{border-radius:0!important}
+  .modal{border-radius:14px 14px 0 0!important}
+  .bottom-nav{background:rgba(6,13,24,.96)!important;border-top:1px solid var(--ios-line)!important}.nav-btn{min-height:55px!important}
+  .font-large .focus-meeting{font-size:25px}.font-large .focus-date,.font-large .focus-meta{font-size:14px}.font-large .focus-total strong{font-size:31px}.font-large .att-name,.font-large .bubble-name{font-size:17px!important}.font-large .att-title,.font-large .bubble-title,.font-large .att-note,.font-large .bubble-note{font-size:12px!important}
+}
